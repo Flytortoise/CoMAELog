@@ -1,0 +1,296 @@
+UniModel) rock@Rock-PC:~/share/CoMAE/codes$ bash RUN/comae/infer.sh 
+12/25/2021 21:00:55 - INFO - __main__ -   initializing cuda...
+12/25/2021 21:01:00 - INFO - __main__ -   Input Argument Information
+12/25/2021 21:01:00 - INFO - __main__ -   data_name                     comae
+12/25/2021 21:01:00 - INFO - __main__ -   config_name                   comae
+12/25/2021 21:01:00 - INFO - __main__ -   inputter_name                 comae
+12/25/2021 21:01:00 - INFO - __main__ -   seed                          22
+12/25/2021 21:01:00 - INFO - __main__ -   load_checkpoint               /home/rock/share/CoMAE/codes/DATA/comae/comae.comae/2021-12-24155855.0.0001.1.1gpu/epoch-1.pkl
+12/25/2021 21:01:00 - INFO - __main__ -   fp16                          False
+12/25/2021 21:01:00 - INFO - __main__ -   max_src_len                   150
+12/25/2021 21:01:00 - INFO - __main__ -   max_src_turn                  6
+12/25/2021 21:01:00 - INFO - __main__ -   max_tgt_len                   40
+12/25/2021 21:01:00 - INFO - __main__ -   max_knl_len                   None
+12/25/2021 21:01:00 - INFO - __main__ -   label_num                     None
+12/25/2021 21:01:00 - INFO - __main__ -   multi_knl                     False
+12/25/2021 21:01:00 - INFO - __main__ -   only_encode                   False
+12/25/2021 21:01:00 - INFO - __main__ -   only_generate                 False
+12/25/2021 21:01:00 - INFO - __main__ -   chinese                       False
+12/25/2021 21:01:00 - INFO - __main__ -   add_nlg_eval                  True
+12/25/2021 21:01:00 - INFO - __main__ -   min_length                    5
+12/25/2021 21:01:00 - INFO - __main__ -   max_length                    35
+12/25/2021 21:01:00 - INFO - __main__ -   num_return_sequences          1
+12/25/2021 21:01:00 - INFO - __main__ -   infer_batch_size              16
+12/25/2021 21:01:00 - INFO - __main__ -   infer_input_file              ['./_reformat/test_happy_annotated.txt', './_reformat/test_offmychest_annotated.txt']
+12/25/2021 21:01:00 - INFO - __main__ -   temperature                   0.7
+12/25/2021 21:01:00 - INFO - __main__ -   top_k                         0
+12/25/2021 21:01:00 - INFO - __main__ -   top_p                         0.9
+12/25/2021 21:01:00 - INFO - __main__ -   num_beams                     1
+12/25/2021 21:01:00 - INFO - __main__ -   repetition_penalty            1.05
+12/25/2021 21:01:00 - INFO - __main__ -   no_repeat_ngram_size          0
+12/25/2021 21:01:00 - INFO - __main__ -   device                        cuda
+12/25/2021 21:01:00 - INFO - __main__ -   n_gpu                         1
+12/25/2021 21:01:00 - INFO - utils.building_utils -   Overall Config Argument Information
+12/25/2021 21:01:00 - INFO - utils.building_utils -   model_type                    comae
+12/25/2021 21:01:00 - INFO - utils.building_utils -   tokenizer_type                gpt2
+12/25/2021 21:01:00 - INFO - utils.building_utils -   tokenizer_path                ./GPT2-small
+12/25/2021 21:01:00 - INFO - utils.building_utils -   decoder_type                  gpt2
+12/25/2021 21:01:00 - INFO - utils.building_utils -   decoder_checkpoint            ./GPT2-small/pytorch_model.bin
+12/25/2021 21:01:00 - INFO - utils.building_utils -   Decoder Config Argument Information
+12/25/2021 21:01:00 - INFO - utils.building_utils -   activation_function           gelu_new
+12/25/2021 21:01:00 - INFO - utils.building_utils -   bos_token_id                  50256
+12/25/2021 21:01:00 - INFO - utils.building_utils -   eos_token_id                  50256
+12/25/2021 21:01:00 - INFO - utils.building_utils -   unk_token_id                  50256
+12/25/2021 21:01:00 - INFO - utils.building_utils -   pad_token_id                  50256
+12/25/2021 21:01:00 - INFO - utils.building_utils -   sep_token_id                  50256
+12/25/2021 21:01:00 - INFO - utils.building_utils -   attn_pdrop                    0.1
+12/25/2021 21:01:00 - INFO - utils.building_utils -   embd_pdrop                    0.1
+12/25/2021 21:01:00 - INFO - utils.building_utils -   initializer_range             0.02
+12/25/2021 21:01:00 - INFO - utils.building_utils -   layer_norm_epsilon            1e-05
+12/25/2021 21:01:00 - INFO - utils.building_utils -   n_ctx                         1024
+12/25/2021 21:01:00 - INFO - utils.building_utils -   n_embd                        768
+12/25/2021 21:01:00 - INFO - utils.building_utils -   n_head                        12
+12/25/2021 21:01:00 - INFO - utils.building_utils -   n_layer                       12
+12/25/2021 21:01:00 - INFO - utils.building_utils -   n_positions                   1024
+12/25/2021 21:01:00 - INFO - utils.building_utils -   resid_pdrop                   0.1
+12/25/2021 21:01:00 - INFO - utils.building_utils -   vocab_size                    50257
+12/25/2021 21:01:00 - INFO - utils.building_utils -   add_type_vocab                True
+12/25/2021 21:01:00 - INFO - utils.building_utils -   type_vocab_size               2
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   Model name './GPT2-small' not found in model shortcut name list (gpt2, gpt2-medium, gpt2-large, gpt2-xl, distilgpt2). Assuming './GPT2-small' is a path, a model identifier, or url to a directory containing tokenizer files.
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   Didn't find file ./GPT2-small/added_tokens.json. We won't load it.
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   Didn't find file ./GPT2-small/special_tokens_map.json. We won't load it.
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   Didn't find file ./GPT2-small/tokenizer_config.json. We won't load it.
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   Didn't find file ./GPT2-small/tokenizer.json. We won't load it.
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file ./GPT2-small/vocab.json
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file ./GPT2-small/merges.txt
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file None
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file None
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file None
+12/25/2021 21:01:00 - INFO - tokenization.tokenization_utils_base -   loading file None
+12/25/2021 21:01:00 - INFO - utils.building_utils -   pad_token_id in toker is inconsistent with model
+12/25/2021 21:01:00 - INFO - utils.building_utils -   sep_token_id in toker is inconsistent with model
+12/25/2021 21:01:00 - INFO - utils.building_utils -   building decoder...
+12/25/2021 21:01:01 - INFO - modeling.gpt2 -   add DIY type vocab and embeddings!
+12/25/2021 21:01:12 - INFO - utils.building_utils -   building model...
+checkpoint: /home/rock/share/CoMAE/codes/DATA/comae/comae.comae/2021-12-24155855.0.0001.1.1gpu/epoch-1.pkl
+12/25/2021 21:01:15 - INFO - utils.building_utils -   loading finetuned model from /home/rock/share/CoMAE/codes/DATA/comae/comae.comae/2021-12-24155855.0.0001.1.1gpu/epoch-1.pkl
+12/25/2021 21:01:16 - INFO - utils.building_utils -   deploying model...
+12/25/2021 21:01:16 - INFO - __main__ -   Number of parameter = 129182976
+{
+  "max_length": 35,
+  "min_length": 5,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_k": 0,
+  "top_p": 0.9,
+  "num_beams": 1,
+  "num_return_sequences": 1,
+  "repetition_penalty": 1.05,
+  "no_repeat_ngram_size": 0,
+  "pad_token_id": 50256,
+  "bos_token_id": 50256,
+  "eos_token_id": 50256
+}
+12/25/2021 21:01:16 - INFO - utils.eval_utils -   compute eval model loss, using eval mode, please change it back to train after calling this function
+validating: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13337/13337 [04:07<00:00, 53.97it/s]
+
+ Epoch 0: Val loss 3.0465338230133057 Val ppl 21.042282104492188 
+inferring: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13337/13337 [14:28<00:00, 15.35it/s]
+cls_er: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      3077
+           1       1.00      1.00      1.00     10260
+
+    accuracy                           1.00     13337
+   macro avg       1.00      1.00      1.00     13337
+weighted avg       1.00      1.00      1.00     13337
+
+cls_er: confusion_matrix
+ [[ 3077     0]
+ [    0 10260]]
+cls_in: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     11261
+           1       1.00      1.00      1.00      2076
+
+    accuracy                           1.00     13337
+   macro avg       1.00      1.00      1.00     13337
+weighted avg       1.00      1.00      1.00     13337
+
+cls_in: confusion_matrix
+ [[11261     0]
+ [    0  2076]]
+cls_ex: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     11178
+           1       1.00      1.00      1.00      2159
+
+    accuracy                           1.00     13337
+   macro avg       1.00      1.00      1.00     13337
+weighted avg       1.00      1.00      1.00     13337
+
+cls_ex: confusion_matrix
+ [[11178     0]
+ [    0  2159]]
+cls_dialact_id: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      4815
+           1       1.00      1.00      1.00       592
+           2       1.00      1.00      1.00       257
+           3       1.00      1.00      1.00       420
+           4       1.00      1.00      1.00      2491
+           5       1.00      1.00      1.00       248
+           6       1.00      1.00      1.00      3204
+           7       1.00      1.00      1.00      1310
+
+    accuracy                           1.00     13337
+   macro avg       1.00      1.00      1.00     13337
+weighted avg       1.00      1.00      1.00     13337
+
+cls_dialact_id: confusion_matrix
+ [[4815    0    0    0    0    0    0    0]
+ [   0  592    0    0    0    0    0    0]
+ [   0    0  257    0    0    0    0    0]
+ [   0    0    0  420    0    0    0    0]
+ [   0    0    0    0 2491    0    0    0]
+ [   0    0    0    0    0  248    0    0]
+ [   0    0    0    0    0    0 3204    0]
+ [   0    0    0    0    0    0    0 1310]]
+cls_emotion_id: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      7834
+           1       1.00      1.00      1.00       223
+           2       1.00      1.00      1.00       557
+           3       1.00      1.00      1.00       497
+           4       1.00      1.00      1.00        28
+           5       1.00      1.00      1.00      1865
+           6       1.00      1.00      1.00       171
+           7       1.00      1.00      1.00      1373
+           8       1.00      1.00      1.00       789
+
+    accuracy                           1.00     13337
+   macro avg       1.00      1.00      1.00     13337
+weighted avg       1.00      1.00      1.00     13337
+
+cls_emotion_id: confusion_matrix
+ [[7834    0    0    0    0    0    0    0    0]
+ [   0  223    0    0    0    0    0    0    0]
+ [   0    0  557    0    0    0    0    0    0]
+ [   0    0    0  497    0    0    0    0    0]
+ [   0    0    0    0   28    0    0    0    0]
+ [   0    0    0    0    0 1865    0    0    0]
+ [   0    0    0    0    0    0  171    0    0]
+ [   0    0    0    0    0    0    0 1373    0]
+ [   0    0    0    0    0    0    0    0  789]]
+12/25/2021 21:20:04 - WARNING - root -   There is less than 2GB of available memory.
+Will try with limiting Meteor to 1GB of memory but this might cause issues.
+If you have problems using Meteor, then you can try to lower the `mem` variable in meteor.py
+12/25/2021 21:20:04 - INFO - gensim.utils -   loading Word2VecKeyedVectors object from /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin
+12/25/2021 21:20:05 - INFO - gensim.utils -   loading vectors from /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin.vectors.npy with mmap=r
+12/25/2021 21:20:05 - INFO - gensim.utils -   setting ignored attribute vectors_norm to None
+12/25/2021 21:20:05 - INFO - gensim.utils -   loaded /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin
+12/25/2021 21:21:07 - INFO - utils.eval_utils -   compute eval model loss, using eval mode, please change it back to train after calling this function
+validating: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7827/7827 [03:16<00:00, 39.75it/s]
+
+ Epoch 0: Val loss 3.287095546722412 Val ppl 26.765012741088867 
+inferring: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 7827/7827 [10:45<00:00, 12.13it/s]
+cls_er: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      3585
+           1       1.00      1.00      1.00      4242
+
+    accuracy                           1.00      7827
+   macro avg       1.00      1.00      1.00      7827
+weighted avg       1.00      1.00      1.00      7827
+
+cls_er: confusion_matrix
+ [[3585    0]
+ [   0 4242]]
+cls_in: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      5420
+           1       1.00      1.00      1.00      2407
+
+    accuracy                           1.00      7827
+   macro avg       1.00      1.00      1.00      7827
+weighted avg       1.00      1.00      1.00      7827
+
+cls_in: confusion_matrix
+ [[5420    0]
+ [   0 2407]]
+cls_ex: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      5858
+           1       1.00      1.00      1.00      1969
+
+    accuracy                           1.00      7827
+   macro avg       1.00      1.00      1.00      7827
+weighted avg       1.00      1.00      1.00      7827
+
+cls_ex: confusion_matrix
+ [[5858    0]
+ [   0 1969]]
+cls_dialact_id: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      1711
+           1       1.00      1.00      1.00       718
+           2       1.00      1.00      1.00       311
+           3       1.00      1.00      1.00       143
+           4       1.00      1.00      1.00      2220
+           5       1.00      1.00      1.00       416
+           6       1.00      1.00      1.00       723
+           7       1.00      1.00      1.00      1585
+
+    accuracy                           1.00      7827
+   macro avg       1.00      1.00      1.00      7827
+weighted avg       1.00      1.00      1.00      7827
+
+cls_dialact_id: confusion_matrix
+ [[1711    0    0    0    0    0    0    0]
+ [   0  718    0    0    0    0    0    0]
+ [   0    0  311    0    0    0    0    0]
+ [   0    0    0  143    0    0    0    0]
+ [   0    0    0    0 2220    0    0    0]
+ [   0    0    0    0    0  416    0    0]
+ [   0    0    0    0    0    0  723    0]
+ [   0    0    0    0    0    0    0 1585]]
+cls_emotion_id: classification_report
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      1772
+           1       1.00      1.00      1.00       694
+           2       1.00      1.00      1.00       763
+           3       1.00      1.00      1.00       559
+           4       1.00      1.00      1.00        82
+           5       1.00      1.00      1.00       675
+           6       1.00      1.00      1.00       644
+           7       1.00      1.00      1.00      1525
+           8       1.00      1.00      1.00      1113
+
+    accuracy                           1.00      7827
+   macro avg       1.00      1.00      1.00      7827
+weighted avg       1.00      1.00      1.00      7827
+
+cls_emotion_id: confusion_matrix
+ [[1772    0    0    0    0    0    0    0    0]
+ [   0  694    0    0    0    0    0    0    0]
+ [   0    0  763    0    0    0    0    0    0]
+ [   0    0    0  559    0    0    0    0    0]
+ [   0    0    0    0   82    0    0    0    0]
+ [   0    0    0    0    0  675    0    0    0]
+ [   0    0    0    0    0    0  644    0    0]
+ [   0    0    0    0    0    0    0 1525    0]
+ [   0    0    0    0    0    0    0    0 1113]]
+12/25/2021 21:35:16 - INFO - gensim.utils -   loading Word2VecKeyedVectors object from /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin
+12/25/2021 21:35:17 - INFO - gensim.utils -   loading vectors from /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin.vectors.npy with mmap=r
+12/25/2021 21:35:17 - INFO - gensim.utils -   setting ignored attribute vectors_norm to None
+12/25/2021 21:35:17 - INFO - gensim.utils -   loaded /home/rock/share/CoMAE/emb/glove.6B.300d.model.bin
